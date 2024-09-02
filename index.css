@@ -1,0 +1,327 @@
+
+/*  Header section styles */
+
+
+header{
+    background-color: #0d6dfd15;
+}
+nav{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 200px;
+}
+.SignUpButton, .BuyNowButton, .SearchButton{
+  height: 40px;
+  width: 100px;
+  background-color: rgba(0, 0, 255, 0.582);
+  border: none;
+  border-radius: 5px;
+  font-size: larger;
+}
+
+.DivClass1{
+    /* border: 1px solid red; */
+    margin: 20px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.HClass1{
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+.PClass1{
+    /* border: 1px solid red; */
+}
+.PClass2{
+    margin-top: -1em;
+    /* border: 1px solid red; */
+}
+.BuyNowButton{
+  margin-bottom: 400px;
+}
+
+
+
+
+/* Section 1 styles */
+
+
+
+
+
+.DivClass2{
+    /* border: 1px solid red; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 200px;
+}
+.ImgClass2{
+   /* border: 1px solid blue; */
+    position: relative;
+    bottom: 120px;
+}
+.ImgClass1{
+    /* border: 1px solid blue; */
+    position: relative;
+    bottom: 50px;
+}
+.DivClass3{
+    /* border: 1px solid blue; */
+    margin-top: 150px;
+    text-align: center;
+    margin-bottom: 150px;
+}
+.HClass2{
+    font-size: 2.5em;
+}
+.InputClass1{
+    width: 400px;
+    height: 37px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(128, 128, 128, 0.144);
+    padding-left: 10px;
+    font-size: large;
+}
+
+
+
+
+/* Phone Section */
+
+
+.PhoneContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 50px;
+    column-gap: 30px;
+    margin: 0px 100px;
+}
+
+
+
+.OuterDiv{
+     border: 1px solid blue;
+     background-color: white;
+     box-shadow: 0 1px 10px 0 rgb(0 0 0 / 0.5);
+     /* width: 320px; */
+     border-radius: 20px;
+}
+.ImageDiv{
+    background-color: rgba(128, 128, 128, 0.247);
+    margin: 25px auto;
+    border-radius: 20px;
+    width: 300px;
+    height: 320px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.DescriptionDiv{
+    text-align: center;
+}
+.ImgClass{
+    height: 220ox;
+    width: 220px;
+}
+
+.PClass3{
+    font-size: 15px;
+    /* padding-left: 30px; */
+    margin-top: -1em;
+}
+.PhonePrice{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.DivClass10{
+    /* border: 1px solid red; */
+    margin-top: 50px;
+    text-align: center;
+}
+.ShowDetailButton{
+    height: 30px;
+    width: 150px;
+    background-color: rgba(0, 0, 255, 0.582);
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    margin-bottom: 20px;
+    color: white;
+}
+#ShowMoreButton{
+    height: 30px;
+    width: 150px;
+    background-color: rgba(0, 0, 255, 0.582);
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    margin-bottom: 20px;
+    color: white;
+    margin-top: 50px;
+}
+.ShowMoreButton{
+    text-align: center;
+    /* border: 1px solid red; */
+    margin: 0px auto;
+}
+
+
+
+
+
+
+/* footer section styles */
+
+
+
+
+
+footer{
+     background-color: #0d6dfd15;
+     margin-top: 100px;
+}
+.DivClass11{
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 200px;
+    height: 10px;
+}
+.DivClass12{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+.ImgClass3{
+    height: 40px;
+    width: 40px;
+}
+.JoinPremiumButton{
+    margin-top: 20px;
+}
+.DivClass13{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+
+    padding-bottom: 100px;
+}
+.JoinPremiumButton{
+    height: 35px;
+    width: 150px;
+    background-color: rgba(0, 0, 255, 0.582);
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    margin-bottom: 25px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+/* Responsive Styles for small devices */
+
+
+
+
+
+
+@media screen and (max-width:576px) {
+   
+    nav{
+        margin: 0px 20px;
+    }
+    .HClass1{
+        font-size: 2em;
+    }
+    .BuyNowButton{
+        margin-bottom: 200px;
+      }
+      .DivClass2{ 
+        height: 100px;
+    }
+    .ImgClass2{
+        width: 150px;
+        bottom: 70px;
+    }
+    .ImgClass1{
+        bottom: 42px;
+        width: 120px;
+    }
+    .ImgClass1 img{
+        width: 120px;
+    }
+    .ImgClass2 img{
+        width: 150px;
+    }
+    .InputClass1{
+        width: 250px;
+    }
+    .DivClass3{
+        margin-top: 10px;
+    }
+    .HClass2{
+        font-size: 1.8em;
+    }
+    .DivClass4{
+        flex-direction: column;
+        gap: 0px;
+    }
+    .DivClass8{
+        width: 90%;
+        height: 450px;
+    }
+    .DivClass8 img{
+        height: 300ox;
+        width: 100%px;
+    }
+    .DivClass5, .DivClass6, .DivClass7{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .DivClass11{
+        flex-direction: column;
+        padding: 0px;
+        height: 220px;
+    }
+    .DivClass12{
+        column-gap: 15px;
+    }
+    .JoinPremiumButton{
+        margin-top: 23px;
+    }
+    .DivClass13{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 50px;
+    }
+    
+}
+
+.DisplayHidden{
+    display: none;
+}
+
+
+
+
+
+
