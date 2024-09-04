@@ -12,7 +12,7 @@ nav{
     align-items: center;
     margin: 0px 200px;
 }
-.SignUpButton, .BuyNowButton, .SearchButton{
+.SignUpButton, .SearchButton{
   height: 40px;
   width: 100px;
   background-color: rgba(0, 0, 255, 0.582);
@@ -30,19 +30,19 @@ nav{
     align-items: center;
 }
 .HClass1{
-    font-size: 1.5em;
+    font-size: 2.5em;
     margin-bottom: 30px;
 }
 .PClass1{
     /* border: 1px solid red; */
+    margin-top: -1.5em;
 }
 .PClass2{
     margin-top: -1em;
     /* border: 1px solid red; */
+    margin-bottom: 450px;
 }
-.BuyNowButton{
-  margin-bottom: 400px;
-}
+
 
 
 
@@ -229,19 +229,18 @@ footer{
     margin-bottom: 25px;
     color: white;
 }
-#ModalDisplay{
+#ModalDisplay {
     background-color: white;
     width: 650px;
     height: 800px;
     box-shadow: 0 1px 10px 0 rgb(0, 0, 0);
     border-radius: 10px;
     padding-left: 10px;
-
-    position: absolute;
-    top: 1420px;
-    left: 650px;
-
-    /* position: fixed; */
+    position: fixed;
+    top: 20px; /* Adjust to make sure it's visible */
+    left: 50%;
+    transform: translateX(-50%); /* Center the div horizontally*/
+    /* z-index: 1000; */
 }
 #ModalDisplayOkButton{
     width: 150px;
