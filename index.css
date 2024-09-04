@@ -229,93 +229,49 @@ footer{
     margin-bottom: 25px;
     color: white;
 }
+#ModalDisplay{
+    background-color: white;
+    width: 650px;
+    height: 800px;
+    box-shadow: 0 1px 10px 0 rgb(0, 0, 0);
+    border-radius: 10px;
+    padding-left: 10px;
 
+    position: absolute;
+    top: 1420px;
+    left: 650px;
 
+    /* position: fixed; */
+}
+#ModalDisplayOkButton{
+    width: 150px;
+    height: 40px;
+    background-color: rgba(0, 0, 255, 0.582);
+    border: none;
+    border-radius: 10px;
+    font-size: large;
+    color: white;
 
-
-
-
-
-
-/* Responsive Styles for small devices */
-
-
-
-
-
-
-@media screen and (max-width:576px) {
-   
-    nav{
-        margin: 0px 20px;
-    }
-    .HClass1{
-        font-size: 2em;
-    }
-    .BuyNowButton{
-        margin-bottom: 200px;
-      }
-      .DivClass2{ 
-        height: 100px;
-    }
-    .ImgClass2{
-        width: 150px;
-        bottom: 70px;
-    }
-    .ImgClass1{
-        bottom: 42px;
-        width: 120px;
-    }
-    .ImgClass1 img{
-        width: 120px;
-    }
-    .ImgClass2 img{
-        width: 150px;
-    }
-    .InputClass1{
-        width: 250px;
-    }
-    .DivClass3{
-        margin-top: 10px;
-    }
-    .HClass2{
-        font-size: 1.8em;
-    }
-    .DivClass4{
-        flex-direction: column;
-        gap: 0px;
-    }
-    .DivClass8{
-        width: 90%;
-        height: 450px;
-    }
-    .DivClass8 img{
-        height: 300ox;
-        width: 100%px;
-    }
-    .DivClass5, .DivClass6, .DivClass7{
-        width: 100%;
-        margin-bottom: 40px;
-    }
-    .DivClass11{
-        flex-direction: column;
-        padding: 0px;
-        height: 220px;
-    }
-    .DivClass12{
-        column-gap: 15px;
-    }
-    .JoinPremiumButton{
-        margin-top: 23px;
-    }
-    .DivClass13{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        padding-left: 50px;
-    }
-    
+    position: relative;
+    left: 220px;
+    bottom: -10px;
 }
 
+/* Dynamically created */
+.PhoneSpecificationTitle{  
+    font-weight: bold;
+}
+.ImgDiv{
+    /* border: 1px solid red; */
+    text-align: center;
+}
+.ImgDiv img{
+    height: 300px;
+    padding-top: 10px;
+}
+.PhoneName{
+    text-align: center;
+}
 .DisplayHidden{
     display: none;
 }

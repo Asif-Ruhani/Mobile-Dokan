@@ -1,4 +1,4 @@
-const LoadPhone= async(SearchText,show) =>{
+const LoadPhone= async(SearchText='iphone',show) =>{
     
     const response=await fetch(`https://openapi.programming-hero.com/api/phones?search=${SearchText}`);
     const data=await response.json();
@@ -58,7 +58,7 @@ const LoadPhone= async(SearchText,show) =>{
                <h1 class="HClass1">${phone.phone_name}</h1>
                <P class="PClass3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate sapiente quis aliquid aspernatur asperiores autem.</P>
                <p class="PhonePrice">$999</p>
-               <button class="ShowDetailButton" onClick="ShowDetails('${phone.slug}')" >Show Details</button>
+               <button class="ShowDetailButton" onClick="ShowDetailsHandler('${phone.slug}')" >Show Details</button>
             </div>
     `;
 
@@ -97,7 +97,7 @@ const LoadPhone= async(SearchText,show) =>{
 
 
 
-const ShowDetails= async (PhoneId)=>{
+const ShowDetailsHandler= async (PhoneId)=>{
   // console.log('Show detials is clicked',PhoneId)
 
   // load individual phone details
@@ -106,6 +106,39 @@ const ShowDetails= async (PhoneId)=>{
   const data = await response.json();
   const phoneInfo=data.data;
 
-  console.log(data);
+  // console.log(data);
   console.log(phoneInfo);
+  
+  const ModalDisplay=document.getElementById('ModalDisplay');
+  ModalDisplay.classList.remove('DisplayHidden');
+
+
+  ShowDetails(phoneInfo);
+
+  
 }
+
+const ShowDetails = (phoneInfo) =>{
+   const modalDisplay=document.getElementById('ModalDisplay');
+
+    modalDisplay.innerHTML=`
+        <div class="ImgDiv"><img src="${phoneInfo.image}" alt=""></div>
+        <h1 class="PhoneName"> ${phoneInfo.name}</h1>
+        <p> <span class="PhoneSpecificationTitle">Brand: </span> ${phoneInfo.brand}</p>
+        <p> <span class="PhoneSpecificationTitle">Release Date: </span> ${phoneInfo.releaseDate}</p>
+        <p> <span class="PhoneSpecificationTitle">Storage: </span> ${phoneInfo.mainFeatures.storage}</p>
+        <p> <span class="PhoneSpecificationTitle">Display: </span> ${phoneInfo.mainFeatures.displaySize}</p>
+        <p> <span class="PhoneSpecificationTitle">Chipset: </span> ${phoneInfo.mainFeatures.chipSet}</p>
+        <p> <span class="PhoneSpecificationTitle">Name: </span> ${phoneInfo.slug}</p>
+        <p> <span class="PhoneSpecificationTitle">Memory: </span> ${phoneInfo.mainFeatures.memory}</p>
+        <p> <span class="PhoneSpecificationTitle">GPS: </span> ${phoneInfo?.others?.GPS}</p>
+        <button id="ModalDisplayOkButton" onclick="ModalDisplay()">Close</button>
+    `;
+}
+
+function ModalDisplay(){
+  const ModalDisplay=document.getElementById('ModalDisplay');
+  ModalDisplay.classList.add('DisplayHidden');
+}
+
+LoadPhone();
